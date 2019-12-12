@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         btnLogin.setSafeOnClickListener {
             startActivityForResult(
                 Intent(this, URSmsKitActivity::class.java)
-                    .putExtra(URSmsKitActivity.passExtra1, URSmsKitActivity.requestTypeToken)
+                    .putExtra(URSmsKitActivity.passExtra1, URSmsKitActivity.requestTypePhone)
                 ,
                 URSmsKitActivity.resultCode
             )

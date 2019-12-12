@@ -21,8 +21,8 @@ import comm.comquas.ursmskit.CountryAdapter
 import comm.comquas.ursmskit.model.*
 import comm.comquas.ursmskit.net.URSmsKitProvideRetrofit
 import comm.comquas.ursmskit.uty.MyDialogUty
-import comm.comquas.ursmskit.uty.has.MyUrSmsKitHM
 import comm.comquas.ursmskit.uty.has.MyHmUrSmsKit
+import comm.comquas.ursmskit.uty.has.MyUrSmsKitHM
 import comm.comquas.ursmskit.uty.rec.MyRecyclerViewRowClickListener
 import comm.comquas.ursmskit.uty.rec.setSafeOnClickListener
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -41,6 +41,7 @@ class URSmsKitActivity : AppCompatActivity() {
     private var otTyrBDe8E: Int? = null
     private var accIdsJ6ARE: String? = null
     private var goToConfirm: Boolean = false
+    private var resetInterval: CountDownTimer? = null
     private var compositeDisposable = CompositeDisposable()
     private val myApiService by lazy {
         URSmsKitProvideRetrofit.create(
@@ -295,7 +296,8 @@ class URSmsKitActivity : AppCompatActivity() {
 
                     //                    val resendTimeInterval: Long = 3000L
                     val resendTimeInterval: Long = responseData.rePtLY9z!! * 60000L
-                    object : CountDownTimer(resendTimeInterval, 1000) {
+                    resetInterval?.cancel()
+                    resetInterval = object : CountDownTimer(resendTimeInterval, 1000) {
                         override fun onTick(millisUntilFinished: Long) {
                             btnResend.text = "Send SMS Again in " + millisUntilFinished / 1000
                         }

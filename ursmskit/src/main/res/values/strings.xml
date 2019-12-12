@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">acckitlib</string>
+    <string name="confirm_otp_title">Enter the code that was sent to %1$s</string>
+</resources>

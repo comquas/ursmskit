@@ -1,0 +1,3 @@
+include ':app', ':ursmskit'
+//include ':app'
+rootProject.name='Ursmskit'

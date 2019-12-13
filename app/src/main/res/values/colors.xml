@@ -3,4 +3,10 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="ur_sms_kit_background">#000000</color>
+    <color name="ur_sms_kit_primary_text">#400000</color>
+    <color name="ur_sms_kit_secondary_text">#9A400000</color>
+    <color name="ur_sms_kit_button_text">#ffffff</color>
+    <color name="ur_sms_kit_edit_text_phone_text">@color/ur_sms_kit_primary_text</color>
 </resources>

@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                 val returnString = data?.getStringExtra("data")
                 val returnModel = Gson().fromJson(returnString, URSmsKitReturnDataModel::class.java)
                 if (TextUtils.isEmpty(returnModel.token))
-                    textView.text = "${returnModel.phoneNo?.number}"
+                    textView.text = "${returnModel.phone?.number}"
 
                 else
                     textView.text = "${returnModel.token}"

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/ur_sms_kit_background"
     tools:context=".ui.URSmsKitActivity">
 
     <TextView
@@ -13,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:text="Enter your mobile number"
+        android:textColor="@color/ur_sms_kit_primary_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -59,9 +61,10 @@
                     style="@style/TextAppearance.AppCompat.Medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/ur_sms_kit_primary_text"
                     android:paddingLeft="16dp"
                     android:paddingTop="16dp"
-                    android:paddingBottom="16dp"></TextView>
+                    android:paddingBottom="16dp"/>
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/tvPhone"
@@ -73,7 +76,9 @@
                     android:maxLength="20"
                     android:maxLines="1"
                     android:padding="16dp"
-                    android:singleLine="true"></androidx.appcompat.widget.AppCompatEditText>
+                    android:textColor="@color/ur_sms_kit_edit_text_phone_text"
+                    android:textColorHighlight="@color/ur_sms_kit_edit_text_phone_text"
+                    android:singleLine="true"/>
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
@@ -86,6 +91,7 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="12dp"
+        android:textColor="@color/ur_sms_kit_button_text"
         android:enabled="false"
         android:text="Next"
         android:textAllCaps="false"
@@ -100,7 +106,7 @@
         android:layout_height="wrap_content"
         android:visibility="gone"
         app:constraint_referenced_ids="btnNext,linearLayout3,textView"
-        tools:visibility="visible" />
+         />
 
     <TextView
         android:id="@+id/tvConfirmOTPTitle"
@@ -108,6 +114,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:textColor="@color/ur_sms_kit_primary_text"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="16dp"
         android:textAlignment="center"
@@ -144,6 +151,8 @@
             android:maxLength="10"
             android:maxLines="1"
             android:padding="16dp"
+            android:textColor="@color/ur_sms_kit_edit_text_phone_text"
+            android:textColorHighlight="@color/ur_sms_kit_edit_text_phone_text"
             android:singleLine="true"
             android:textAlignment="center" />
     </RelativeLayout>
@@ -158,6 +167,7 @@
         android:layout_marginEnd="12dp"
         android:enabled="false"
         android:text="Continue"
+        android:textColor="@color/ur_sms_kit_button_text"
         android:textAllCaps="false"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -174,6 +184,7 @@
         android:layout_marginEnd="16dp"
         android:enabled="false"
         android:text="Resend"
+        android:textColor="@color/ur_sms_kit_button_text"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -185,6 +196,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
+        tools:visibility="visible"
         app:constraint_referenced_ids="btnResend,relativeLayout,btnContinue,tvConfirmOTPTitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

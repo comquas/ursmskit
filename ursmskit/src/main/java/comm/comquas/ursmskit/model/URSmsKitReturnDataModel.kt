@@ -10,8 +10,8 @@ data class URSmsKitReturnDataModel(
     val createdAt: Int? = 0,
     @SerializedName("error")
     val error: Boolean? = false,
-    @SerializedName("phone_no")
-    val phoneNo: PhoneNo? = PhoneNo(),
+    @SerializedName("phone")
+    val phone: Phone? = Phone(),
     @SerializedName("expire_time")
     val expireTime: Int? = 0,
     @SerializedName("hash")
@@ -24,7 +24,7 @@ data class URSmsKitReturnDataModel(
         val id: String? = ""
     )
 
-    data class PhoneNo(
+    data class Phone(
         @SerializedName("country_prefix")
         val countryPrefix: String? = "",
         @SerializedName("national_number")

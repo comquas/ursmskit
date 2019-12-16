@@ -307,8 +307,6 @@ class URSmsKitActivity : AppCompatActivity() {
                             btnResend.isEnabled = true
                         }
                     }.start()
-//                    if (BuildConfig.DEBUG)
-                    etOTP.setText("${responseData.otCoT5TkHJ}")
                     accIdsJ6ARE = responseData.acIzV257P.toString()
                 }, { error ->
                     var message = error.message

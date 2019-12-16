@@ -155,7 +155,7 @@ class URSmsKitActivity : AppCompatActivity() {
                     urSMSKitCountryList()
                 }, { error ->
                     var message = error.message
-                    var title = "Error!"
+                    var title = "Something Wrong!"
                     when (error) {
                         is HttpException -> {
                             when {
@@ -163,13 +163,13 @@ class URSmsKitActivity : AppCompatActivity() {
                                     val responseBody = error.response()?.errorBody()
                                     val jsonObject = JSONObject(responseBody?.string())
                                     message = jsonObject.getString("message")
-                                    title = error.message()
+//                                    title = error.message()
                                 }
                                 error.response()?.code() == 422 -> {
                                     val responseBody = error.response()?.errorBody()
                                     val jsonObject = JSONObject(responseBody?.string())
                                     message = jsonObject.getString("message")
-                                    title = error.message()
+//                                    title = error.message()
                                 }
                             }
                         }
@@ -232,7 +232,7 @@ class URSmsKitActivity : AppCompatActivity() {
                         }*/
                     }
                     MyDialogUty.showInfoDialog(
-                        this, null, "", "Error!",
+                        this, null, "", "Something Wrong!",
                         message.toString(), getString(R.string.yes)
                     )
                 })
@@ -310,14 +310,14 @@ class URSmsKitActivity : AppCompatActivity() {
                     accIdsJ6ARE = responseData.acIzV257P.toString()
                 }, { error ->
                     var message = error.message
-                    var title = "Error!"
+                    var title = "Something Wrong!"
                     when (error) {
                         is HttpException -> {
                             if (error.response()?.code() == 422) {
                                 val responseBody = error.response()?.errorBody()
                                 val jsonObject = JSONObject(responseBody?.string())
                                 message = jsonObject.getString("message")
-                                title = error.message()
+//                                title = error.message()
                             }
                         }
                     }
@@ -356,14 +356,14 @@ class URSmsKitActivity : AppCompatActivity() {
                     goBackWithOK(responseData)
                 }, { error ->
                     var message = error.message
-                    var title = "Error!"
+                    var title = "Something Wrong!"
                     when (error) {
                         is HttpException -> {
                             if (error.response()?.code() == 422) {
                                 val responseBody = error.response()?.errorBody()
                                 val jsonObject = JSONObject(responseBody?.string())
                                 message = jsonObject.getString("message")
-                                title = error.message()
+//                                title = error.message()
                             }
                         }
                     }

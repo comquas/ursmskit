@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit
 class URSmsKitProvideRetrofit {
     companion object {
         fun create(context: Context, removeLog: Boolean = false): URSmsKitApiService {
-            val baseUrl = "http://acckit.comquas.com/api/"
+            val baseUrl = "https://www.otpsms.net/api/"
             val defaultTimeOut = 45L
 
             fun release(): Retrofit {
